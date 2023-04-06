@@ -61,6 +61,35 @@
         echo '<br>';
         $str="";
     }
+    echo '<br>';
+    echo '<br>';
+
+
+    //Задание №3  
+    ?>
+    <form action="">
+    <label for="num">Введите число:</label>   
+    <input type="number" id="num" name="num"  placeholder="Число от 0 до 10" required="true">
+    <button type="submit">Получить строку чисел</button>
+    </form>
+<br>
+    <?  
+    
+@$num = $_GET["num"];
+$i = 10;
+$str=" ";
+$j=0;
+    while($j <= $i - $num){ 
+        if($j <= $i - $num -1){
+            $str = $str . "$j".',';
+            }else if($j == ($i- $num)){
+                $str = $str . "$j";
+             } 
+            $j++; 
+        echo $str;
+        $str=" ";
+    }
+
     ?>
 </body>
 
