@@ -7,6 +7,8 @@
     Скандинавской школе.Там в основном уклон
     был на фронтенд.Сейчас хотел бы еще
     битрикс освоить.';
+    function about_me($about_me)
+{
 $arr = preg_split('/(?<=[.?!])\s+(?=[a-zа-яё])/i', $about_me);
 foreach($arr as $key=>$value) { 
     if($key==0){
@@ -16,6 +18,7 @@ foreach($arr as $key=>$value) {
     }
 }
   $about_me=implode(' ',$arr1);
-echo $about_me;
-
+return $about_me;
+}
+echo about_me($about_me);
 ?>
