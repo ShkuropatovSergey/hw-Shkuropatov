@@ -1,31 +1,32 @@
 <?php
-echo "Урок 5-6 <br>";
-echo "Слайд 17 <br>";
-echo "Задание 1 <br>";
-echo "<br>";
+//Урок 9-10;
+//Слайд-16;
+//Задание 7;
+//Получение чисел Фибоначчи
 
-$letter = [['ййц','цен','уаа','аыв'], ['аро','вв'], ['фва','аук','кен']];
-foreach ($letter as $sub_letter) {
-    foreach ($sub_letter as $key => $value) {
-        if(mb_substr($value,0,1) == 'а'){
-        echo $value.' ';
-        }
-    }
+//Здесь первые два числа равны 0 и 1, а каждое последующее 
+//число равно сумме двух предыдущих чисел.
+function fibonacci1($n) {
+  $res = array(0,1);
+  for( $i=0; $i < ($n-2); $i++ ){
+      $cur = $res[$i] + $res[$i+1];
+      array_push( $res, $cur );
   }
-
-echo "<br>";
-echo "<br>";
-echo "Задание 2 <br>";
-$number = [[1, 2, 3], [4, 5, 6, 7], [8, 9]];
-$count1=0;
-
-for ($i = 0; $i < count($number); $i++) {
-     for ($j = 0; $j < count($number[$i]); $j++) {
-        $count2=count($number[$i]);
-        $count1++;
-     }
-    echo "<br>";
-echo "Количество элементов ";echo ($i+1)."-го подмассива: ".$count2;
+  return implode(", ",$res);
 }
-echo "<br>";
-echo "Общее количество элементов в массиве: ".$count1;
+
+echo fibonacci1(10) ;
+
+echo '<br>';
+//Здесь первые три числа равны 0, 1, 2, а каждое последующее 
+//число равно сумме трех предыдущих чисел.
+function fibonacci2($n) {
+  $res = array(0,1,2);
+  for( $i=0; $i < ($n-2); $i++ ){
+      $cur = $res[$i] + $res[$i+1] + $res[$i+2];
+      array_push( $res, $cur );
+  }
+  return implode(", ",$res);
+}
+
+echo fibonacci2(10) ;
