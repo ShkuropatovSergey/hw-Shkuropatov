@@ -2,8 +2,8 @@
         <a class="logo" href="#"></a>
         <nav>
             <ul id="navbar">
-                <li><a href="#">Таблица</a></li>
-                <li><a href="flex.php">Flex и grid</a></li>
+                <li><a href="registration.php">Регистрация</a></li>
+                <li><a href="authorization.php">Авторизация</a></li>
                 <li><a href="#">Контакты</a>
                     <div class="hidden">
                         <ul>

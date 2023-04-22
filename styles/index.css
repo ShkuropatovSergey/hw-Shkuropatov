@@ -42,15 +42,14 @@ header a.logo:hover{
     height: 100px;
     position: relative;
     overflow: hidden;
-    padding-right: 40px;
   }
   #navbar .hidden ul {
-    width: 100px;
+    width: 80px;
     background-color: #f90;
     position: absolute;
     transition: 2s all;
     top: -135px;
-    padding: 20px 10px 10px 10px;
+    padding: 20px 0px 10px 7px;
   }
   #navbar, #navbar ul {
     list-style-type: none;
@@ -64,7 +63,8 @@ header a.logo:hover{
     float: left;
     position: relative;
     height: 100%;
-    width: 110px;
+    /* width: 110px; */
+    margin-right: 20px;
     text-align: center;
   }
 #navbar li a {
