@@ -298,6 +298,7 @@
         return $interval->format('%a дней');
     }
     echo dateDifference('2018-09-21', '2016-06-01');
+
     ?>
 </body>
 </body>
