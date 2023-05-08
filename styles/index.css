@@ -57,7 +57,7 @@ header a.logo:hover{
   #navbar {
     height: 30px;
     padding-left: 25px;
-    min-width: 470px;
+    width: 610px;
   }
   #navbar li {
     float: left;
@@ -225,12 +225,7 @@ h1{
         width: 100%;
     }
 }  
-@media screen and (max-width: 576px){
-    /* .wrapper{
-        position: relative;
-        max-width: 800px;
-        margin: 0 auto;
-    } */
+@media screen and (max-width: 670px){
     .burger{
         display: block;
     }
@@ -263,9 +258,6 @@ h1{
         padding: 10px;
         align-items: center; 
       }
-      /* #navbar li:hover .hidden{ 
-        left: 100px;
-      } */
       .hidden{
         left: 100px;
         height: 120px;

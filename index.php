@@ -24,7 +24,8 @@ if(count($_SESSION["page"])<1)
     <title>Document</title>
 </head>
 
-<body>
+
+<body style="background-color: <?=$_COOKIE['color']?>";>
     <?
     require_once "require\hi.php";
     require_once "require\header.php";
