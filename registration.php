@@ -1,3 +1,17 @@
+<?php
+session_start();
+
+$_SESSION['secret']='secret';
+
+if(isset($_SESSION['IS_AUTH']) && $_SESSION['IS_AUTH']==true){
+echo "Авторизованный пользователь <br>
+<a href='/exit.php'>Выйти</a>";
+}else{
+    echo "Неавторизованный пользователь";
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

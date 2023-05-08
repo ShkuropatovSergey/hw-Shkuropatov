@@ -1,3 +1,15 @@
+<?php
+session_start();
+$index="В последний раз вы были на index.php";
+$_SESSION["page"]=array();
+if(isset($_SESSION["page"]))
+{
+if(count($_SESSION["page"])<1)
+{
+    $_SESSION["page"][]=$index;
+}
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
