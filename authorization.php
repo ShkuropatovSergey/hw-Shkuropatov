@@ -78,10 +78,14 @@ if (isset($_POST['login'])) {
                     ?>
     <h1>Авторизация</h1>
     <form class="aa" method='post'>
-        <input type="text" name='login' placeholder='Логин'>
-        <input type="password" name='password' placeholder='Пароль'>
-        <button type="submit">Авторизоваться</button>
+    <label for="log">Запиши логин:</label>
+        <input type="text" name='login' id="log" placeholder='Логин'><br><br>
+        <label for="pas">Запиши пароль:</label>
+        <input type="password" name='password' id="pas" placeholder='Пароль'><br><br>
+        <label for="auth">Авторизуйся:</label>
+        <button type="submit" id="auth">Авторизоваться</button>
     </form>
+    <!-- Отменяет повторную отправку формы -->
     <script>
         if (window.history.replaceState) {
             window.history.replaceState(null, null, window.location.href);
@@ -89,7 +93,7 @@ if (isset($_POST['login'])) {
     </script>
  
     <h3><a href="fact.php">Перейти на страницу fact.php</a></h3>
-    <h3><a href="fact.php">Перейти на страницу bitrix.php</a></h3>
+    <h3><a href="bitrix.php">Перейти на страницу bitrix.php</a></h3>
     <h3><a href="index.php">Перейти на страницу index.php</a></h3>
 </body>
 </html>
