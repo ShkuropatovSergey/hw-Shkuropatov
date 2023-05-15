@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+@keyframes hi{
+    0% {opacity: 0;}
+    10% {opacity: 1;}
+    100% {opacity: 0;}
+}
+@keyframes logo{
+    0% {opacity: 0;}
+    100% {
+        opacity: 1;
+        transform: scale(-1,1);
+    }
+}
+/* .wrapper{
+    width: 100%;
+    margin: 0 auto;
+}  */
+header{
+    background: rgb(157, 2, 171);
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* overflow: hidden; */
+}
+header a.logo{
+    animation: logo 7s linear 2s infinite alternate;
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+    background: url(../images/logo.jpg) center center/contain no-repeat;
+}
+header a.logo:hover{
+    animation-play-state: paused;
+}
+.hidden{
+    width: 90px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  #navbar .hidden ul {
+    width: 80px;
+    background-color: #f90;
+    position: absolute;
+    transition: 2s all;
+    top: -135px;
+    padding: 20px 0px 10px 7px;
+  }
+  #navbar, #navbar ul {
+    list-style-type: none;
+  }
+  #navbar {
+    height: 30px;
+    padding-left: 25px;
+    width: 610px;
+  }
+  #navbar li {
+    float: left;
+    position: relative;
+    height: 100%;
+    /* width: 110px; */
+    margin-right: 20px;
+    text-align: center;
+  }
+#navbar li a {
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+  } 
+#navbar li a:before{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background: yellow;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: 2s all;
+}
+#navbar li:nth-child(1) a:hover:before,
+#navbar li:nth-child(2) a:hover:before,
+#navbar li:nth-child(4) a:hover:before{
+    width: 100%;
+}
+  #navbar li:hover .hidden ul{ 
+    top: -10px;
+  }
+  #navbar ul li:hover { background-color: #666; }
+
+
+  /* burger */
+  .burger {
+    position: relative;
+    display: none;
+    background-color: #ffffff;
+    width: 30px;
+    height: 5px;
+    border-top: 10px solid red;
+    border-bottom: 10px solid red;
+  }
+  
+  .burger:before {
+    content: "";
+    width: 100%;
+    height: 5px;
+    background-color: #ffffff;
+    position: absolute;
+    top: -10px;
+  }
+  
+  .burger:after {
+    content: "";
+    width: 100%;
+    height: 5px;
+    background-color: #ffffff;
+    position: absolute;
+    bottom: -10px;
+  }

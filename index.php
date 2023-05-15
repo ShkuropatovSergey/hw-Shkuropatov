@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 $index="В последний раз вы были на index.php";
 $_SESSION["page"]=array();
 if(isset($_SESSION["page"]))
@@ -8,6 +8,13 @@ if(count($_SESSION["page"])<1)
 {
     $_SESSION["page"][]=$index;
 }
+}
+
+if (isset($_SESSION['IS_AUTH']) && $_SESSION['IS_AUTH'] == true) {
+    echo "Авторизованный пользователь <br><br>
+    <a href='/exit.php'>Удалить сессию</a>";
+} else {
+    echo "Неавторизованный пользователь ";
 }
 ?>
 <!DOCTYPE html>
@@ -28,6 +35,7 @@ if(count($_SESSION["page"])<1)
 <body style="background-color: <?=$_COOKIE['color']?>";>
     <?
     require_once "require\hi.php";
+    echo '<br><br>';
     require_once "require\header.php";
     ?>
 
@@ -259,61 +267,6 @@ if(count($_SESSION["page"])<1)
     </footer>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/script.js"></script>
-
-
-    <?php
-
-    //Получаем общий текст
-    require_once('simple_html_dom.php');
-    $html = file_get_html('index.php');
-    $str = $html->plaintext;
-
-    echo '<br>';
-    echo '<br>';
-    //Количество слов
-    //$about_me и $offer - строки из about_me.php и offer.php
-    function countWords($about_me, $offer, $str)
-    {
-        $string = $about_me . ' ' . $offer . ' ' . $str;
-        echo  "Количество слов на сайте:";
-        return count(str_word_count($string, 1, "АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя"));
-    }
-    echo countWords($about_me, $offer, $str);
-    echo '<br>';
-
-    //Количество гласных букв
-    function countLetters($offer, $about_me, $str)
-    {
-        $offer_letters = strip_tags($offer);
-        $about_me_letters = strip_tags($about_me);
-        $str_letters = strip_tags($str);
-        $vowel_letters = $about_me_letters . $offer_letters . $str_letters;
-        echo '<br>';
-        preg_match_all('/[aeiouаоуыэеёиюяАОУЫЭЕЁИЮЯ]/i', $vowel_letters, $matches);
-        echo "Количество глассных букв: ";
-        return count($matches[0]);
-    }
-    echo countLetters($offer, $about_me, $str);
-    echo '<br>';
-    echo '<br>';
-
-    //Разница дат
-    $date1 = '';
-    $date2 = '';
-    function dateDifference($date1, $date2)
-    {
-        $dateObject1 = date_create($date1);
-        $dateObject2 = date_create($date2);
-
-        $interval = date_diff($dateObject1, $dateObject2);
-
-        echo "Разница между датами $date1 и $date2: ";
-        return $interval->format('%a дней');
-    }
-    echo dateDifference('2018-09-21', '2016-06-01');
-
-    ?>
-</body>
 </body>
 
 </html>

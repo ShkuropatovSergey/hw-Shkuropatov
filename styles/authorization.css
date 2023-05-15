@@ -1,21 +1,17 @@
-.custom-file-input {
-    color: transparent;
-  }
-
-  .registration{
+.authorization{
     display: flex;
     justify-content: center;
     margin: 30px 30px;
-  }
-  .box{
+}
+.box{
     padding: 30px 25px;
     border: 5px solid #FFC90D;
     width: 500px;
-  }
-  h1{
+}
+h1{
     margin-bottom: 25px;
-  }
-  form input,form div{
+}
+form input{
     width: 100%;
     margin-bottom: 7px;
     border: none;
@@ -23,12 +19,8 @@
     border-bottom: 1px solid gray;
     font-size: 17px;
     padding-bottom: 5px;
-    display: block;
-    color: gray;
-    text-align: left;
-    background: white;
-  }
-  form .button{
+}
+form .button{
     padding: 12px 0;
     margin-top: 20px;
     width: 100%;
@@ -39,8 +31,8 @@
     cursor: pointer;
     font-size: 20px;
     position: relative;
-  }
-  form .button:before{
+}
+form .button:before{
     content: "";
     width: 3px;
     height: 100%;
@@ -49,11 +41,10 @@
     left: 0;
     background-color: #FFC90D;
     transition: 1s all;
-  }
-  form .button:hover:before{
+}
+form .button:hover:before{
     transform: rotate(180deg); 
     left: 100%;
-  }
-  
-  
-  
+}
+
+

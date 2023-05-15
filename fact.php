@@ -1,5 +1,5 @@
 <?
-session_start();
+// session_start();
     $fact="В последний раз вы были на fact.php";
     $_SESSION["page"]=array();
 if(isset($_SESSION["page"]))

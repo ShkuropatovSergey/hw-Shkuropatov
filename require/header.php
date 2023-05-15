@@ -6,18 +6,9 @@ if (isset($_GET['color'])) {
     echo "Сейчас выбран цвет: ".$_GET['color'].'<br>';
     setcookie('color', $_GET['color'], time() + 365 * 24 * 3600);
 }
-
-if (isset($_SESSION['IS_AUTH']) && $_SESSION['IS_AUTH'] == true) {
-    echo "Авторизованный пользователь <br><br>
-    <a href='/exit.php'>Удалить сессию</a><br><br>";
-} else {
-    echo "Неавторизованный пользователь <br><br> ";
-}
 ?>
-<h3><a href="authorization.php">Перейти на страницу authorization.php</a></h3>
-<br><br>
 <header>
-    <a class="logo" href="#"></a>
+    <a class="logo" href="index.php"></a>
     <nav>
         <ul id="navbar">
             <li><a href="registration.php">Регистрация</a></li>
